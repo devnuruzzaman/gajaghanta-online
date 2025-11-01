@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>প্যাকেজ — গজঘন্টা অনলাইন</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/img/logo/logo.png">
+  <!-- CSS includes -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="../assets/css/custom-animation.css">
+  <link rel="stylesheet" href="../assets/css/flaticon_broadx.css">
+  <link rel="stylesheet" href="../assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="../assets/css/fa-local.css">
+  <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/slick.css">
+  <link rel="stylesheet" href="../assets/css/spacing.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.css">
+  <!-- Resource hints -->
+  <link rel="preload" as="image" href="../assets/img/logo/logo.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .pricing{padding:40px 0}
+    .pricing-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:25px}
+    @media(min-width:768px){.pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:1200px){.pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    
+    .tp-price-2-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      padding: 30px 25px;
+      height: 440px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tp-price-2-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .tp-price-2-top h5 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 10px;
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .tp-price-2-rate {
+      font-size: 28px;
+      font-weight: 800;
+      color: #4a5568;
+      margin: 10px auto !important;
+      width: 100%;
+      text-align: center !important;
+    }
+    .tp-price-2-list {
+      text-align: left;
+      margin: 15px 0 30px;
+      flex-grow: 1;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .tp-price-2-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+    .tp-price-2-list li {
+      padding: 5px 0;
+      border-bottom: 1px dashed #e2e8f0;
+      color: #4a5568;
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .tp-price-2-list li:last-child {
+      border-bottom: none;
+    }
+    .tp-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #4f46e5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      margin: auto auto 0;
+      width: fit-content;
+      text-align: center;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+    }
+    .tp-btn.black-bg {
+      background: black;
+      margin: auto auto 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .tp-btn:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="nav">
+        <a href="../" class="brand" data-nav="home">
+          <img src="../assets/img/logo/logo.png" alt="গজঘন্টা অনলাইন" class="brand-logo" />
+          <div class="brand-text">
+            <div class="brand-name">গজঘন্টা অনলাইন</div>
+            <div class="brand-slogan">সুপার ফাস্ট ফাইবার ব্রডব্যান্ড</div>
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="../" data-nav="home">হোম</a>
+          <a href="../About" data-nav="about">সম্পর্কে</a>
+          <a href="../Service" data-nav="service">সার্ভিস</a>
+          <a href="../Packages" data-nav="packages">প্যাকেজ</a>
+          <a href="../Payment" data-nav="payment">পেমেন্ট</a>
+          <a href="../Contact" data-nav="contact">যোগাযোগ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="../Packages" class="btn outline" data-nav="packages">প্যাকেজ দেখুন</a>
+          <a href="../Register" class="btn primary" data-nav="register">শুরু করুন</a>
+        </div>
+        <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">≡</button>
+      </div>
+    </div>
+    <div id="mobileNav" class="mobile-nav">
+      <div class="container">
+        <a href="../" data-nav="home">হোম</a>
+        <a href="../About" data-nav="about">সম্পর্কে</a>
+        <a href="../Service" data-nav="service">সার্ভিস</a>
+        <a href="../Packages" data-nav="packages">প্যাকেজ</a>
+        <a href="../Payment" data-nav="payment">পেমেন্ট</a>
+        <a href="../Contact" data-nav="contact">যোগাযোগ</a>
+      </div>
+    </div>
+  </div>
+
+
+   <main>
+      <!-- price area start -->
+      <div class="tp-price-2-area pt-120 pb-80">
+         <div class="container">
+            <div class="row justify-content-center">
+               <!-- Package 1 -->
+               <div class="col-xl-4 col-lg-4 col-md-12 mb-30 wow tpfadeUp mx-auto" data-wow-duration=".9s" data-wow-delay=".2s">
+                  <div class="tp-price-2-item">
+                     <div class="tp-price-2-shape">
+                        <img src="../assets/img/price/shape-2-1.png" alt="">
+                     </div>
+                     <div class="tp-price-2-top">
+                        <h5>হোম ১২ মেগাবাইট</h5>
+                     </div>
+                     <h4 class="tp-price-2-rate pb-30">৳৫২৫/মাস</h4>
+                     <div class="tp-price-2-list pb-35">
+                        <ul>
+                           <li>১০০ এমবিপিএস বিডিআইএক্স</li>
+                           <li>৪কে ইউটিউব ও ফেসবুক</li>
+                           <li>অপটিক্যাল ফাইবার সংযোগ</li>
+                           <li>২৪/৭ অনলাইন সাপোর্ট</li>
+                           <li>সিঙ্গেল ব্র্যান্ড রাউটার ১০ এমবি</li>
+                        </ul>
+                     </div>
+                     <a class="tp-btn black-bg" href="../Register"><span>যোগাযোগ করুন</span></a>
+                  </div>
+               </div>
+               
+               <!-- Package 2 -->
+               <div class="col-xl-4 col-lg-4 col-md-12 mb-30 wow tpfadeUp mx-auto" data-wow-duration=".9s" data-wow-delay=".3s">
+                  <div class="tp-price-2-item active">
+                     <div class="tp-price-2-shape">
+                        <img src="../assets/img/price/shape-2-2.png" alt="">
+                     </div>
+                     <div class="tp-price-2-top">
+                        <h5>হোম ৩০ মেগাবাইট</h5>
+                     </div>
+                     <h4 class="tp-price-2-rate pb-30">৳৬০০/মাস</h4>
+                     <div class="tp-price-2-list pb-35">
+                        <ul>
+                           <li>১০০ এমবিপিএস বিডিআইএক্স</li>
+                           <li>৪কে ইউটিউব ও ফেসবুক</li>
+                           <li>অপটিক্যাল ফাইবার সংযোগ</li>
+                           <li>২৪/৭ অনলাইন সাপোর্ট</li>
+                           <li>সিঙ্গেল ব্র্যান্ড রাউটার ১০ এমবি</li>
+                        </ul>
+                     </div>
+                     <a class="tp-btn" href="../Register"><span>যোগাযোগ করুন</span></a>
+                  </div>
+               </div>
+               
+               <!-- Package 3 -->
+               <div class="col-xl-4 col-lg-4 col-md-12 mb-30 wow tpfadeUp mx-auto" data-wow-duration=".9s" data-wow-delay=".4s">
+                  <div class="tp-price-2-item">
+                     <div class="tp-price-2-shape">
+                        <img src="../assets/img/price/shape-2-1.png" alt="">
+                     </div>
+                     <div class="tp-price-2-top">
+                        <h5>হোম ৩৫ মেগাবাইট</h5>
+                     </div>
+                     <h4 class="tp-price-2-rate pb-30">৳৬৩০/মাস</h4>
+                     <div class="tp-price-2-list pb-35">
+                        <ul>
+                           <li>১০০ এমবিপিএস বিডিআইএক্স</li>
+                           <li>৪কে ইউটিউব ও ফেসবুক</li>
+                           <li>অপটিক্যাল ফাইবার সংযোগ</li>
+                           <li>২৪/৭ অনলাইন সাপোর্ট</li>
+                           <li>সিঙ্গেল ব্র্যান্ড রাউটার ১০ এমবি</li>
+                        </ul>
+                     </div>
+                     <a class="tp-btn black-bg" href="../Register"><span>যোগাযোগ করুন</span></a>
+                  </div>
+               </div>
+               
+               <!-- Package 4 -->
+               <div class="col-xl-4 col-lg-4 col-md-12 mb-30 wow tpfadeUp mx-auto" data-wow-duration=".9s" data-wow-delay=".5s">
+                  <div class="tp-price-2-item">
+                     <div class="tp-price-2-shape">
+                        <img src="../assets/img/price/shape-2-1.png" alt="">
+                     </div>
+                     <div class="tp-price-2-top">
+                        <h5>হোম ৪০ মেগাবাইট</h5>
+                     </div>
+                     <h4 class="tp-price-2-rate pb-30">৳৭৩৫/মাস</h4>
+                     <div class="tp-price-2-list pb-35">
+                        <ul>
+                           <li>১০০ এমবিপিএস বিডিআইএক্স</li>
+                           <li>৪কে ইউটিউব ও ফেসবুক</li>
+                           <li>অপটিক্যাল ফাইবার সংযোগ</li>
+                           <li>২৪/৭ অনলাইন সাপোর্ট</li>
+                           <li>সিঙ্গেল ব্র্যান্ড রাউটার ১০ এমবি</li>
+                        </ul>
+                     </div>
+                     <div class="tp-price-2-bottom">
+                        <a class="tp-btn black-bg" href="../Register"><span>যোগাযোগ করুন</span></a>
+                     </div>
+                     
+                  </div>
+               </div>
+               
+               <!-- Package 5 -->
+               <div class="col-xl-4 col-lg-4 col-md-12 mb-30 wow tpfadeUp mx-auto" data-wow-duration=".9s" data-wow-delay=".6s">
+                  <div class="tp-price-2-item">
+                     <div class="tp-price-2-shape">
+                        <img src="../assets/img/price/shape-2-1.png" alt="">
+                     </div>
+                     <div class="tp-price-2-top">
+                        <h5>হোম ৫০ মেগাবাইট</h5>
+                     </div>
+                     <h4 class="tp-price-2-rate pb-30">৳৮৪০/মাস</h4>
+                     <div class="tp-price-2-list pb-35">
+                        <ul>
+                           <li>১০০ এমবিপিএস বিডিআইএক্স</li>
+                           <li>৪কে ইউটিউব ও ফেসবুক</li>
+                           <li>অপটিক্যাল ফাইবার সংযোগ</li>
+                           <li>২৪/৭ অনলাইন সাপোর্ট</li>
+                           <li>সিঙ্গেল ব্র্যান্ড রাউটার ১০ এমবি</li>
+                        </ul>
+                     </div>
+                     <a class="tp-btn black-bg" href="../Register"><span>যোগাযোগ করুন</span></a>
+                  </div>
+               </div>
+
+                              <!-- Package 6 -->
+               <div class="col-xl-4 col-lg-4 col-md-12 mb-30 wow tpfadeUp mx-auto" data-wow-duration=".9s" data-wow-delay=".6s">
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- price area end -->
+
+    
+
+      <!-- newsletter area start -->
+      <div class="tp-newsletter-area tp-newsletter-overley grey-bg pt-120 pb-120"
+         data-background="assets/img/price/bg-1-1.jpg">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-xl-9">
+                  <div class="tp-newsletter-content text-center z-index wow tpfadeUp" data-wow-duration=".9s"
+                     data-wow-delay=".3s">
+                     <div class="tp-newsletter-title-box">
+                        <span class="tp-section-subtitle">২৫% ছাড়</span>
+                        <h4 class="tp-section-title pb-10">আমাদের নিউজলেটারে সাবস্ক্রাইব করুন</h4>
+                     </div>
+                     <div class="tp-newsletter-text">
+                        <p class="mb-55">নতুন অফার ও আপডেট পেতে সাবস্ক্রাইব করুন।</p>
+                     </div>
+                     <div class="tp-newsletter-input-box d-flex justify-content-center">
+                        <input type="email" placeholder="আপনার ইমেইল">
+                        <button class="tp-btn black-bg" type="submit"><span>এখনই পাঠান</span></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- newsletter area end -->
+
+   </main>
+
+
+
+
+  <div class="footer">
+    <div class="container section tight">
+      <div class="foot-grid">
+        <div class="foot">
+          <div class="brand" style="text-align: left;">
+            <a href="../" class="brand">
+              <img src="../assets/img/logo/logo.png" alt="গজঘন্টা অনলাইন" class="brand-logo" />
+              <div class="brand-text">
+                <div class="brand-name">গজঘন্টা অনলাইন</div>
+                <div class="brand-slogan">সুপার ফাস্ট ফাইবার ব্রডব্যান্ড</div>
+              </div>
+            </a>
+          </div>
+          <p class="mt-3" style="font-size:14px;color:var(--text-2)">বিশ্বস্ত ফাইবার ইন্টারনেট হোম ও বিজনেসের জন্য।</p>
+          <div class="mt-4" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>গজঘণ্টা বাজার, গজঘণ্টা-৫৪১০, গংগাচড়া, রংপুর</span>
+          </div>
+          <div class="mt-2" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+8801988084009">+৮৮০ ১৯৮৮ ০৮৪০০৯</a>
+          </div>
+          <div class="mt-2" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+8809658095843">+৮৮০ ৯৬৫৮০৯৫৮৪৩</a>
+          </div>
+          <div class="mt-2" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:gajaghantaonline@gmail.com">gajaghantaonline@gmail.com</a>
+          </div>
+        </div>
+        <div class="foot" style="text-align: center;">
+          <h4>কোম্পানি</h4>
+          <ul>
+            <li><a href="../About" data-nav="about">সম্পর্কে</a></li>
+            <li><a href="../Service" data-nav="service">সার্ভিস</a></li>
+            <li><a href="../Packages" data-nav="packages">প্যাকেজ</a></li>
+            <li><a href="../Payment" data-nav="payment">পেমেন্ট</a></li>
+            <li><a href="../Contact" data-nav="contact">যোগাযোগ</a></li>
+          </ul>
+        </div>
+        <div class="foot" style="text-align: center;">
+          <h4>লিগ্যাল</h4>
+          <ul>
+            <li><a href="#" data-nav="terms">টার্মস অফ সার্ভিস</a></li>
+            <li><a href="#" data-nav="privacy">প্রাইভেসি পলিসি</a></li>
+            <li><a href="#" data-nav="acceptable-use">অ্যাকসেপ্টেবল ইউজ</a></li>
+            <li><a href="#">অ্যাকসেপ্টেবল ইউজ</a></li>
+          </ul>
+        </div>
+        <div class="foot" style="text-align: center;">
+          <h4>নিউজলেটার</h4>
+          <p class="mt-3" style="font-size:14px;color:var(--text-2)">নতুন প্যাকেজ ও অফারের আপডেট পেতে সাবস্ক্রাইব করুন।</p>
+          <form id="newsForm" class="mt-4" style="display:flex;gap:8px" onsubmit="return false;">
+            <input required type="email" placeholder="আপনার ইমেইল দিন" />
+            <button class="btn" style="background:#0f172a;color:#fff">সাবস্ক্রাইব</button>
+          </form>
+        </div>
+      </div>
+      <div class="mt-8 footer-bottom">
+        <div class="fb-left">
+          <p style="color: white;">© <span id="year"></span> <a href="../" style="color: rgb(221, 9, 9);">গজঘন্টা অনলাইন</a>. সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+        <div class="fb-center">
+          <p style="color: white;">ভালবাসা দিয়ে তৈরি — দ্রুত গতির জন্য।</p>
+        </div>
+        <div id="developer" class="fb-right">
+          <p style="color: white;">ডিজাইনারঃ <a href="https://www.facebook.com/itznuruzzamanbd" style="color: rgb(221, 9, 9);">মোঃ নুরুজ্জামান</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="whatsapp" class="fab" aria-label="WhatsApp chat">💬 হোয়াটসঅ্যাপ</button>
+  
+  <!-- JS includes -->
+  <script src="../assets/js/Script.js" defer></script>
+  <script data-cfasync="false" src="../assets/js/email-decode.min.js"></script>
+  <script src="../assets/js/vendor/jquery.js" defer></script>
+  <script src="../assets/js/bootstrap-bundle.js" defer></script>
+  <script src="../assets/js/imagesloaded-pkgd.js" defer></script>
+  <script src="../assets/js/isotope-pkgd.js" defer></script>
+  <script src="../assets/js/jarallax.js" defer></script>
+  <script src="../assets/js/magnific-popup.js" defer></script>
+  <script src="../assets/js/slick.js" defer></script>
+  <script src="../assets/js/nice-select.js" defer></script>
+  <script src="../assets/js/vendor/waypoints.js" defer></script>
+  <script src="../assets/js/wow.js" defer></script>
+  <script src="../assets/js/range-slider.js" defer></script>
+  <script src="../assets/js/purecounter.js" defer></script>
+  <script src="../assets/js/swiper-bundle.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
