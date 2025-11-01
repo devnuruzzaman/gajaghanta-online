@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>পেমেন্ট — গজঘন্টা অনলাইন</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/img/logo/logo.png">
+  <!-- CSS includes -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="../assets/css/custom-animation.css">
+  <link rel="stylesheet" href="../assets/css/flaticon_broadx.css">
+  <link rel="stylesheet" href="../assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="../assets/css/fa-local.css">
+  <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/slick.css">
+  <link rel="stylesheet" href="../assets/css/spacing.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.css">
+  <!-- Resource hints -->
+  <link rel="preload" as="image" href="../assets/img/logo/logo.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .pay-card{max-width:840px;margin:0 auto;padding:24px;border:1px solid var(--border);border-radius:16px;background:#fff;box-shadow:var(--shadow)}
+    .pay-card h3{margin:0 0 8px}
+    .pay-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px;align-items:start}
+    @media(max-width:767px){.pay-grid{grid-template-columns:1fr}}
+    .qr-box{border:1px solid var(--border);border-radius:12px;padding:12px;background:#fff;text-align:center}
+    .qr-box img{width:100%;height:auto;display:block;max-width:320px;margin:0 auto}
+    .note{font-size:13px;color:var(--text-2)}
+    .inline-feedback{display:none;margin-left:8px;font-size:12px;color:var(--brand-600);font-weight:700}
+    .inline-feedback.show{display:inline}
+    .pull-up{margin:-60px 0 0 auto;align-self:flex-start}
+    @media(max-width:767px){.pull-up{margin:10px 0 0 0}}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="nav">
+        <a href="../" class="brand" data-nav="home">
+          <img src="../assets/img/logo/logo.png" alt="গজঘন্টা অনলাইন" class="brand-logo" />
+          <div class="brand-text">
+            <div class="brand-name">গজঘন্টা অনলাইন</div>
+            <div class="brand-slogan">সুপার ফাস্ট ফাইবার ব্রডব্যান্ড</div>
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="../" data-nav="home">হোম</a>
+          <a href="../About" data-nav="about">সম্পর্কে</a>
+          <a href="../Service" data-nav="service">সার্ভিস</a>
+          <a href="../Packages" data-nav="packages">প্যাকেজ</a>
+          <a href="../Payment" data-nav="payment">পেমেন্ট</a>
+          <a href="../Contact" data-nav="contact">যোগাযোগ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="../Packages" class="btn outline" data-nav="packages">প্যাকেজ দেখুন</a>
+          <a href="../Register" class="btn primary" data-nav="register">শুরু করুন</a>
+        </div>
+        <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">≡</button>
+      </div>
+    </div>
+    <div id="mobileNav" class="mobile-nav">
+      <div class="container">
+        <a href="../" data-nav="home">হোম</a>
+        <a href="../About" data-nav="about">সম্পর্কে</a>
+        <a href="../Service" data-nav="service">সার্ভিস</a>
+        <a href="../Packages" data-nav="packages">প্যাকেজ</a>
+        <a href="../Payment" data-nav="payment">পেমেন্ট</a>
+        <a href="../Contact" data-nav="contact">যোগাযোগ</a>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">পেমেন্ট</h1>
+      <p class="section-sub">এই পেজে আপাতত শুধুমাত্র <strong>বিকাশ (bKash)</strong> পেমেন্ট নেওয়া হয়।</p>
+      <div class="card mt-6 pay-card">
+        <h3>বিকাশ (bKash) পেমেন্ট</h3>
+        <p class="mt-2 muted">Payment করুন নিম্নের নম্বরে:</p>
+        <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+          <code id="bkashNo" style="font-weight:800;font-size:18px;">01341519045</code>
+          <button id="copyBtn" class="btn" style="padding:6px 10px" aria-label="নম্বার কপি করুন">কপি করুন</button>
+          <span id="copyMsg" class="inline-feedback">কপি হয়েছে</span>
+        </div>
+        <div class="mt-4 pay-grid">
+          <div>
+            <h4 style="margin:0 0 6px">পেমেন্ট ধাপ (bKash App):</h4>
+            <ol style="margin:0;padding-left:18px;color:var(--text-2)">
+              <li>Payment → নম্বর দিন: <strong>01341519045</strong></li>
+              <li>Amount দিন (আপনার প্যাকেজের মাসিক বিল)</li>
+              <li>Reference এ আপনার CId/userid লিখুন</li>
+              <li>Confirm করে ট্রানজেকশন সম্পন্ন করুন</li>
+            </ol>
+            <p class="note mt-3">দয়া করে রেফারেন্সে আপনার গ্রাহক আইডি (CId/userid) সঠিকভাবে লিখবেন।</p>
+          </div>
+          <figure class="qr-box pull-up" style="margin:0">
+            <img src="../assets/img/payment/bkash.png" alt="bKash QR — স্ক্যান করে পেমেন্ট করুন" />
+            <figcaption style="text-align:center;font-size:12px;color:var(--text-2);margin-top:6px">
+              QR কোড স্ক্যান করুন
+              · <a href="../assets/img/payment/bkash.png" target="_blank" rel="noopener" class="note">বড় করে দেখুন</a>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="mt-3 muted">পেমেন্ট হয়ে গেলে ট্রানজেকশন আইডি দিয়ে আমাদের সাপোর্টে জানালে দ্রুত আপডেট করা হবে।</p>
+        <a href="https://wa.me/+8801988084009" class="btn primary mt-3">সাপোর্টে জানান</a>
+      </div>
+    </div>
+  </main>
+
+
+
+  <div class="footer">
+    <div class="container section tight">
+      <div class="foot-grid">
+        <div class="foot">
+          <div class="brand" style="text-align: left;">
+            <a href="../" class="brand">
+              <img src="../assets/img/logo/logo.png" alt="গজঘন্টা অনলাইন" class="brand-logo" />
+              <div class="brand-text">
+                <div class="brand-name">গজঘন্টা অনলাইন</div>
+                <div class="brand-slogan">সুপার ফাস্ট ফাইবার ব্রডব্যান্ড</div>
+              </div>
+            </a>
+          </div>
+          <p class="mt-3" style="font-size:14px;color:var(--text-2)">বিশ্বস্ত ফাইবার ইন্টারনেট হোম ও বিজনেসের জন্য।</p>
+          <div class="mt-4" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>গজঘণ্টা বাজার, গজঘণ্টা-৫৪১০, গংগাচড়া, রংপুর</span>
+          </div>
+          <div class="mt-2" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+8801988084009">+৮৮০ ১৯৮৮ ০৮৪০০৯</a>
+          </div>
+          <div class="mt-2" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+8809658095843">+৮৮০ ৯৬৫৮০৯৫৮৪৩</a>
+          </div>
+          <div class="mt-2" style="display:flex;gap:8px;color:#475569;align-items:center">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:gajaghantaonline@gmail.com">gajaghantaonline@gmail.com</a>
+          </div>
+        </div>
+        <div class="foot" style="text-align: center;">
+          <h4>কোম্পানি</h4>
+          <ul>
+            <li><a href="../About" data-nav="about">সম্পর্কে</a></li>
+            <li><a href="../Service" data-nav="service">সার্ভিস</a></li>
+            <li><a href="../Packages" data-nav="packages">প্যাকেজ</a></li>
+            <li><a href="../Payment" data-nav="payment">পেমেন্ট</a></li>
+            <li><a href="../Contact" data-nav="contact">যোগাযোগ</a></li>
+          </ul>
+        </div>
+        <div class="foot" style="text-align: center;">
+          <h4>লিগ্যাল</h4>
+          <ul>
+            <li><a href="#" data-nav="terms">টার্মস অফ সার্ভিস</a></li>
+            <li><a href="#" data-nav="privacy">প্রাইভেসি পলিসি</a></li>
+            <li><a href="#" data-nav="acceptable-use">অ্যাকসেপ্টেবল ইউজ</a></li>
+            <li><a href="#">অ্যাকসেপ্টেবল ইউজ</a></li>
+          </ul>
+        </div>
+        <div class="foot" style="text-align: center;">
+          <h4>নিউজলেটার</h4>
+          <p class="mt-3" style="font-size:14px;color:var(--text-2)">নতুন প্যাকেজ ও অফারের আপডেট পেতে সাবস্ক্রাইব করুন।</p>
+          <form id="newsForm" class="mt-4" style="display:flex;gap:8px" onsubmit="return false;">
+            <input required type="email" placeholder="আপনার ইমেইল দিন" />
+            <button class="btn" style="background:#0f172a;color:#fff">সাবস্ক্রাইব</button>
+          </form>
+        </div>
+      </div>
+      <div class="mt-8 footer-bottom">
+        <div class="fb-left">
+          <p style="color: white;">© <span id="year"></span> <a href="../" style="color: rgb(221, 9, 9);">গজঘন্টা অনলাইন</a>. সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+        <div class="fb-center">
+          <p style="color: white;">ভালবাসা দিয়ে তৈরি — দ্রুত গতির জন্য।</p>
+        </div>
+        <div id="developer" class="fb-right">
+          <p style="color: white;">ডিজাইনারঃ <a href="https://www.facebook.com/itznuruzzamanbd" style="color: rgb(221, 9, 9);">মোঃ নুরুজ্জামান</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="whatsapp" class="fab" aria-label="WhatsApp chat">💬 হোয়াটসঅ্যাপ</button>
+  
+  <!-- JS includes -->
+  <script src="../assets/js/Script.js" defer></script>
+  <script data-cfasync="false" src="../assets/js/email-decode.min.js"></script>
+  <script src="../assets/js/vendor/jquery.js" defer></script>
+  <script src="../assets/js/bootstrap-bundle.js" defer></script>
+  <script src="../assets/js/imagesloaded-pkgd.js" defer></script>
+  <script src="../assets/js/isotope-pkgd.js" defer></script>
+  <script src="../assets/js/jarallax.js" defer></script>
+  <script src="../assets/js/magnific-popup.js" defer></script>
+  <script src="../assets/js/slick.js" defer></script>
+  <script src="../assets/js/nice-select.js" defer></script>
+  <script src="../assets/js/vendor/waypoints.js" defer></script>
+  <script src="../assets/js/wow.js" defer></script>
+  <script src="../assets/js/range-slider.js" defer></script>
+  <script src="../assets/js/purecounter.js" defer></script>
+  <script src="../assets/js/swiper-bundle.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var copyBtn = document.getElementById('copyBtn');
+      var bkashNo = document.getElementById('bkashNo');
+      var copyMsg = document.getElementById('copyMsg');
+      if(copyBtn && bkashNo){
+        copyBtn.addEventListener('click', async function(){
+          try{
+            await navigator.clipboard.writeText(bkashNo.textContent.trim());
+            if(copyMsg){ copyMsg.classList.add('show'); setTimeout(function(){ copyMsg.classList.remove('show'); }, 1500); }
+          }catch(e){
+            var sel = window.getSelection(); var range = document.createRange();
+            range.selectNodeContents(bkashNo); sel.removeAllRanges(); sel.addRange(range);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
