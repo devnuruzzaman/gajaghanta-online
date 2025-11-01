@@ -1,0 +1,20 @@
+@font-face{
+  font-family:"Font Awesome 6 Free";
+  font-style:normal; font-weight:900; font-display:swap;
+  src:url("../font/fa-solid-900.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Font Awesome 6 Free";
+  font-style:normal; font-weight:400; font-display:swap;
+  src:url("../font/fa-regular-400.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Font Awesome 6 Brands";
+  font-style:normal; font-weight:400; font-display:swap;
+  src:url("../font/fa-brands-400.woff2") format("woff2");
+}
+
+/* Force classes to use local Free/Brands font families */
+.fa,.fa-solid{font-family:"Font Awesome 6 Free"!important;font-weight:900}
+.fa-regular{font-family:"Font Awesome 6 Free"!important;font-weight:400}
+.fa-brands{font-family:"Font Awesome 6 Brands"!important;font-weight:400}
