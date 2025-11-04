@@ -14825,4 +14825,38 @@ p.checkout-coupon input[type=text]:focus {
   }
 }
 
+
+
+/* Register CTA */
+.btn-register {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff3b3b 0%, #ff7a00 100%);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(17,24,39,0.12);
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s;
+  font-size: 16px;
+}
+.btn-register:hover,
+.btn-register:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(17,24,39,0.16);
+  opacity: 0.98;
+}
+.btn-register:active {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(17,24,39,0.12);
+}
+
+/* Center wrapper (optional) */
+.register-cta { text-align: center; margin: 12px 0; }
+
+/* Responsive tweak */
+@media (max-width: 576px) {
+  .btn-register { width: 100%; padding: 14px; border-radius: 8px; text-align: center; }
+}
+
 /*# sourceMappingURL=main.css.map */
